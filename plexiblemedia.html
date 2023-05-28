@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: flex-start; /* Left justify the content */
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      padding: 50px; /* Add padding for spacing */
+    }
+
+    .link-container {
+      position: relative;
+    }
+
+    .link {
+      display: block;
+      margin-bottom: 20px; /* Increase margin for spacing */
+      white-space: nowrap; /* Prevent line breaks */
+      font-family: "Akira Expanded", sans-serif;
+      font-size: 96px; /* Increased font size */
+      font-weight: bold;
+      color: #FFF;
+      text-decoration: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .link.active {
+      position: absolute;
+      right: 0;
+      animation: slideToRight 0.5s ease;
+    }
+
+    @keyframes slideToRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(100vw - 100%));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="link-container">
+    <a href="#" class="link">RECIPES</a>
+    <a href="#" class="link">RADARR</a>
+    <a href="#" class="link">SONARR</a>
+    <a href="#" class="link">BOOKS</a>
+    <a href="#" class="link">REQUESTS</a>
+  </div>
+</body>
+</html>
